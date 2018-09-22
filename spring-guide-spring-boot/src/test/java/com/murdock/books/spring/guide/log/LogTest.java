@@ -19,4 +19,12 @@ public class LogTest {
             logger.error("got error with param {}, now", value, ex);
         }
     }
+
+    @Test
+    public void info() {
+        Logger logger = LoggerFactory.getLogger(LogTest.class);
+        logger.info("End process:{0},{1} wrong style", "x", "y");
+        logger.info("End process:{},{} correct style", "x", "y");
+    }
+
 }
