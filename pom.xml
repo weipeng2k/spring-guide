@@ -17,6 +17,7 @@
     <modules>
         <module>spring-guide-classic-war</module>
         <module>spring-guide-spring-boot</module>
+        <module>spring-guide-ioc-container</module>
     </modules>
     <dependencyManagement>
         <dependencies>
