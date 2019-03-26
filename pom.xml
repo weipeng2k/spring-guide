@@ -13,11 +13,13 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <mysql.version>5.1.29</mysql.version>
         <spring.boot.version>1.5.12.RELEASE</spring.boot.version>
+        <spring.version>4.3.16.RELEASE</spring.version>
     </properties>
     <modules>
         <module>spring-guide-classic-war</module>
         <module>spring-guide-spring-boot</module>
         <module>spring-guide-ioc-container</module>
+        <module>spring-guide-event-publish</module>
     </modules>
     <dependencyManagement>
         <dependencies>
@@ -31,6 +33,11 @@
             </dependency>
             <!-- Spring Boot BOM: End -->
             <!--</dependency>-->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-test</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
