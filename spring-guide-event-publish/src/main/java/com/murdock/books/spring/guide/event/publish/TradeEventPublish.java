@@ -53,6 +53,16 @@ public class TradeEventPublish implements ApplicationContextAware {
         applicationContext.publishEvent(tradeMsg);
     }
 
+    public void sendCreateSubTradeMessage(Long orderId) {
+        Order order = new Order();
+        order.setOrderId(orderId);
+        SubTradeMsg tradeMsg = new SubTradeMsg();
+        tradeMsg.setOrder(order);
+        tradeMsg.setEventType(EventType.CREATE);
+
+        applicationContext.publishEvent(tradeMsg);
+    }
+
     /**
      * 发送确认收货事件
      */

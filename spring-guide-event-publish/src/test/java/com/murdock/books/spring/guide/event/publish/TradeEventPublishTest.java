@@ -30,6 +30,11 @@ public class TradeEventPublishTest {
         tradeEventPublish.sendReceiveGoodsTradeMessage(123L);
     }
 
+    @Test
+    public void create_sub() {
+        tradeEventPublish.sendCreateSubTradeMessage(321L);
+    }
+
 
     @Configuration
     static class Config {
